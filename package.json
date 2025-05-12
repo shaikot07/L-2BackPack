@@ -1,0 +1,15 @@
+{
+  "name": "backpak-problem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "problem-01.js",
+
+  "scripts": {
+     "dev": "node problem-01.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
