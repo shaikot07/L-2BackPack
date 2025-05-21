@@ -9,4 +9,26 @@ function removeDuplicates(arr) {
 
 const number = [1, 2, 2, 3, 4, 4, 5];
 const result = removeDuplicates(number);
-console.log(result );
+// console.log(result );
+// =============try to data stackture==================
+function bubbleSort(arr) {
+    let len = arr.length;
+    for (let i = 0; i < len; i++) {
+        
+        for (let j = 0; j < len - 1; j++) {
+            
+            if (arr[j] > arr[j + 1]) {
+              //  swape position and store value temporary
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    return arr; 
+}
+
+
+let numbers = [64, 34, 25, 12, 22, 11, 90];
+console.log(bubbleSort(numbers)); 
