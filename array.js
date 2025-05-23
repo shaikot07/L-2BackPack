@@ -61,3 +61,30 @@ export function preparationTimeInMinutes(numberOfLayers) {
 export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
   return preparationTimeInMinutes(numberOfLayers) + actualMinutesInOven;
 }
+
+
+
+
+// 02. Find the second largest number in an array
+// Approach: Iterate through the array, keeping track of the largest and second largest numbers.
+
+function secondLargest(arr) {
+  if (arr.length < 2) return null;
+
+  let first = -Infinity;
+  let second = -Infinity;
+
+  for (let num of arr) {
+    if (num > first) {
+      second = first;
+      first = num;
+    } else if (num > second && num < first) {
+      second = num;
+    }
+  }
+
+  return second === -Infinity ? null : second;
+}
+
+const arr = [12, 35, 1, 10, 34, 1];
+console.log(secondLargest(arr));
