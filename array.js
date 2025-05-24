@@ -87,4 +87,31 @@ function secondLargest(arr) {
 }
 
 const arr = [12, 35, 1, 10, 34, 1];
-console.log(secondLargest(arr));
+// console.log(secondLargest(arr));
+
+// problem coffe maker 
+
+// 03. Coffee Maker 
+export const PREPARATION_MINUTES_PER_CUP = 3;
+export const EXPECTED_MINUTES_TO_BREW = 15;
+
+/**
+ * time need to brew coffee
+ */
+export function remainingMinutesToBrew(actualMinutesSoFar) {
+  return EXPECTED_MINUTES_TO_BREW - actualMinutesSoFar;
+}
+
+/**
+ * peparation time for coffee and number of cups
+ */
+export function preparationTimeInMinutes(numberOfCups) {
+  return numberOfCups * PREPARATION_MINUTES_PER_CUP;
+}
+
+/**
+ * total time in minutes for coffee preparation and actual minutes so far
+ */
+export function totalTimeInMinutes(numberOfCups, actualMinutesSoFar) {
+  return preparationTimeInMinutes(numberOfCups) + actualMinutesSoFar;
+}
