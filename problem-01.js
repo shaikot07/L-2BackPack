@@ -80,11 +80,11 @@ function updateAgeByName(peopleArray, name, newAge) {
 }
 
 // Example usage:
-const people = [
+const peopleList = [
     { name: 'Alice', age: 30 },
     { name: 'Bob', age: 25 },
     { name: 'Charlie', age: 35 }
 ];
 
 // Update age of 'Bob' to 26
-updateAgeByName(people, 'Bob', 26);
+updateAgeByName(peopleList, 'Bob', 26);
