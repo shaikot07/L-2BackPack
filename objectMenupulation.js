@@ -69,3 +69,48 @@ console.log(userMap[2].name);   // "Bob"
 // 🧊 FREEZE & SEAL
 Object.freeze(user); // Can't change anything
 Object.seal(user);   // Can update existing, can't add/delete
+
+
+// problem 02
+
+const product = {
+  id: 101,
+  title: "Wireless Headphones",
+  price: 99.99,
+  specs: {
+    batteryLife: "20 hours",
+    weight: "250g",
+    dimensions: {
+      width: "15cm",
+      height: "18cm",
+      depth: "5cm"
+    }
+  },
+  manufacturer: {
+    name: "AudioMax",
+    location: {
+      country: "USA",
+      state: "California"
+    }
+  }
+};
+
+
+const {
+  title: productTitle,
+  price,
+  specs: {
+    batteryLife: battery,
+    dimensions: { width, height }
+  },
+  manufacturer: {
+    location: { country }
+  }
+} = product;
+
+console.log(productTitle); // "Wireless Headphones"
+console.log(price);        // 99.99
+console.log(battery);      // "20 hours"
+console.log(width);        // "15cm"
+console.log(height);       // "18cm"
+console.log(country); 
