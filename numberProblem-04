@@ -1,0 +1,41 @@
+/**
+ * Calculates total cost for a border (mess member)
+ *
+ * @param {number} foodCost - Monthly food expense
+ * @param {number} utilityCost - Monthly utility expense
+ * @param {number} extraCharges - Any additional charges (e.g., cleaning, gas)
+ * @returns {number} total monthly cost
+ */
+export function totalMonthlyCost(foodCost, utilityCost, extraCharges) {
+  return foodCost + utilityCost + extraCharges;
+}
+
+/**
+ * Calculates the mille count (in thousands) for a mess member
+ *
+ * @param {number} cost - Total monthly cost
+ * @returns {number} mille count (rounded to nearest whole number)
+ */
+export function milleCount(cost) {
+  return Math.round(cost / 1000);
+}
+
+/**
+ * Calculates formatted mille cost with thousands separator
+ *
+ * @param {number} foodCost - Monthly food expense
+ * @param {number} utilityCost - Monthly utility expense
+ * @param {number} extraCharges - Additional charges
+ * @returns {string} formatted mille value (e.g., "97")
+ */
+export function formattedMilleCount(foodCost, utilityCost, extraCharges) {
+  const cost = totalMonthlyCost(foodCost, utilityCost, extraCharges);
+  const mille = milleCount(cost);
+  return mille.toLocaleString(); // Adds commas if needed
+}
+
+// const food = 78500;
+// const utility = 9000;
+// const extra = 5500;
+
+// console.log(formattedMilleCount(food, utility, extra)); 
