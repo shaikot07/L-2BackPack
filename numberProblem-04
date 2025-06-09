@@ -34,8 +34,8 @@ export function formattedMilleCount(foodCost, utilityCost, extraCharges) {
   return mille.toLocaleString(); // Adds commas if needed
 }
 
-// const food = 78500;
-// const utility = 9000;
-// const extra = 5500;
+const food = 78500;
+const utility = 9000;
+const extra = 5500;
 
-// console.log(formattedMilleCount(food, utility, extra)); 
+console.log(formattedMilleCount(food, utility, extra)); 
