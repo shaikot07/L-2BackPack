@@ -1,7 +1,7 @@
 // mid level problem solving with objects in JavaScript
 
 
-// 📦 CREATE & ACCESS
+//  CREATE & ACCESS
 const user = {
   id: 1,
   name: "Jane",
@@ -13,52 +13,52 @@ const user = {
 console.log(user.name);         // Dot notation
 console.log(user['address']);   // Bracket notation
 
-// ✏️ ADD / UPDATE / DELETE
+// add / updated / deleted
 user.age = 30;                  // Add
 user.name = "Janet";            // Update
 delete user.address.zip;        // Delete
 
-// 🧱 DESTRUCTURING
+// DESTRUCTURING
 const { name, address: { city } } = user;
 console.log(name);              // "Janet"
 console.log(city);              // "Seattle"
 
-// 🌀 COMPUTED PROPERTIES
+// COMPUTED PROPERTIES
 const key = "email";
 const userData = { [key]: "jane@example.com" };
 console.log(userData);          // { email: "jane@example.com" }
 
-// 🔁 LOOPING WITH Object.entries()
+//  LOOPING WITH Object.entries()
 const obj = { a: 1, b: 2 };
 Object.entries(obj).forEach(([k, v]) => {
   console.log(`${k}: ${v}`);
 });
 
-// 🔄 TRANSFORM WITH Object.fromEntries()
+//  TRANSFORM WITH Object.fromEntries()
 const doubled = Object.fromEntries(
   Object.entries(obj).map(([k, v]) => [k, v * 2])
 );
 console.log(doubled);           // { a: 2, b: 4 }
 
-// 🔧 OBJECT UTILITIES
+//  OBJECT UTILITIES
 console.log(Object.keys(obj));    // ['a', 'b']
 console.log(Object.values(obj));  // [1, 2]
 console.log(Object.entries(obj)); // [['a', 1], ['b', 2]]
 
-// 🧩 MERGING OBJECTS
+//  MERGING OBJECTS
 const base = { a: 1, b: 2 };
 const update = { b: 3, c: 4 };
 const merged = { ...base, ...update };
 console.log(merged);             // { a: 1, b: 3, c: 4 }
 
-// 🛡 OPTIONAL CHAINING & NULLISH COALESCING
+// OPTIONAL CHAINING & NULLISH COALESCING
 const username = user.profile?.name ?? "Guest";
 console.log(username);           // "Guest"
 
-// 🔁 NESTED UPDATE
+//  NESTED UPDATE
 user.address.city = "Portland";
 
-// 🔄 ARRAY → OBJECT MAP
+//  ARRAY → OBJECT MAP
 const users = [
   { id: 1, name: "Alice" },
   { id: 2, name: "Bob" }
@@ -66,7 +66,7 @@ const users = [
 const userMap = Object.fromEntries(users.map(u => [u.id, u]));
 console.log(userMap[2].name);   // "Bob"
 
-// 🧊 FREEZE & SEAL
+//  FREEZE & SEAL
 Object.freeze(user); // Can't change anything
 Object.seal(user);   // Can update existing, can't add/delete
 
