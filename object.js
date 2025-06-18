@@ -33,3 +33,4 @@ student1.addGrade(90);
 student1.addGrade(70);
 
 console.log("Average grade of", student1.name, "is", student1.getAverage());
+console.log("Average grade of new one", student1.name, "is", student1.getAverage());
