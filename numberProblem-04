@@ -39,3 +39,4 @@ const utility = 9000;
 const extra = 5500;
 
 console.log(formattedMilleCount(food, utility, extra)); 
+console.log("test for new ",formattedMilleCount(food, utility, extra)); 
