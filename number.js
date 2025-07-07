@@ -39,7 +39,10 @@ export function dayRate(ratePerHour) {
 export function daysInBudget(budget, ratePerHour) {
  return Math.floor(budget / dayRate(ratePerHour));
 }
-
+// -------------------
+export function daysBInBudget(budget, ratePerHour) {
+ return Math.floor(budget / dayRate(ratePerHour));
+}
 /**
  * Calculates the discounted rate for large projects, rounded up
  *
